@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.white {
+  color: #ffffff;
+}
+
+.dark-blue-100 {
+  color: #609ed4;
+}
+
+.dark-blue-200 {
+  color: #356ea9;
+}
+
+.dark-blue-300 {
+  color: #0a3871;
+}
+
+.dark-blue-400 {
+  color: #072b61;
+}
+
+.dark-blue-500 {
+  color: #052051;
+}
+
+.light-blue-f3f5fc {
+  color: #f3f5fc;
+}
+
+.light-blue-200 {
+  color: #eff1fa;
+}
+
+.light-blue-300 {
+  color: #e9ecf8;
+}
+
+.light-blue-400 {
+  color: #aab2d5;
+}
+
+.light-blue-500 {
+  color: #757fb2;
+}
+
+.gray-100 {
+  color: #ced4da;
+}
+
+.gray-200 {
+  color: #adb5bd;
+}
+
+.gray-300 {
+  color: #868e96;
+}
+
+.gray-400 {
+  color: #495057;
+}
+
+.gray-500 {
+  color: #343a40;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+body {
+  padding: 1em 4em;
+  background-color: #f3f5fc;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+  gap: 4rem;
+  padding: 1rem;
+}
+
+header {
+  align-self: self-start;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  height: 100%;
+}
+
+main > :first-child {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 3em;
+}
+
+textarea {
+  resize: none;
+}
+
+main > :first-child > textarea {
+  width: 100%;
+  height: 70%;
+  background-color: transparent;
+  outline-style: none;
+  border: none;
+  font-size: 2em;
+}
+
+main > :nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 7px 0px #ced4da;
+  background-color: #ffffff;
+  text-align: center;
+  margin: auto;
+  line-height: 1.5;
+  padding: 0.5rem;
+}
+
+main > :nth-child(2) img {
+  width: 85%;
+}
+
+main > :nth-child(2) h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+main > :nth-child(2) p {
+  font-size: 1em;
+}
+
+.exclamation {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.2rem;
+  width: 80%;
+}
+
+.exclamation p {
+  font-size: 0.7em;
+}
+
+.btn-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+button {
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-container button {
+  width: 50%;
+  padding-block: 0.8em;
+  cursor: pointer;
+  font-size: 1em;
+  border: none;
+  border-radius: 1.5em;
+}
+
+.btn-container button:first-child {
+  background-color: #0a3871;
+  color: #ffffff;
+}
+
+.btn-container button:nth-child(2) {
+  background-color: #ffffff;
+  color: #343a40;
+  border: 2px solid #0a3871;
+}
+
+.copy > textarea {
+  width: 100%;
+  height: 86%;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+}
+
+.copy button {
+  width: 100%;
+  height: 67px;
+  cursor: pointer;
+  font-size: 1em;
+  border: none;
+  border-radius: 1.5em;
+  background-color: #ffffff;
+  color: #343a40;
+  border: 2px solid #0a3871;
+}
+
+footer {
+  display: flex;
+  background-color: #052051;
+  height: 5vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+}
+
+.copy {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  button {
+    transition: none;
+  }
+
+  button:hover {
+    transform: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .copy {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app,
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    gap: 2rem;
+  }
+
+  main > :first-child,
+  main > :first-child > textarea,
+  main > :nth-child(2),
+  main > :nth-child(2) textarea,
+  .copy {
+    width: 100%;
+    padding: 0;
+  }
+
+  main > :nth-child(2) {
+    padding: 0.5rem;
+  }
+
+  main > :first-child {
+    height: 100%;
+  }
+
+  main > :nth-child(2) {
+    height: 40%;
+  }
+
+  main > :nth-child(2) img {
+    display: none;
+  }
+
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    margin-top: 1rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .btn-container button,
+  .copy button {
+    width: 100%;
+  }
+}

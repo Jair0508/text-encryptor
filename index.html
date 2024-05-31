@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Deyver Jaliri" />
+    <title>Challenge Encriptador Alura Latam</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1><img src="./images/logo.svg" alt="" /></h1>
+      </header>
+      <main>
+        <section>
+          <textarea
+            id="user-text"
+            placeholder="Ingrese el texto aqui"
+            autofocus
+          ></textarea>
+          <div class="exclamation">
+            <img src="./images/exclamation.svg" alt="" />
+            <p>Solo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="btn-container">
+            <button onclick="btnEncriptar()">Encriptar</button>
+            <button onclick="btnDesencriptar()">Desencriptar</button>
+          </div>
+        </section>
+        <section>
+          <div id="seccion-copy" class="copy">
+            <textarea id="encrypted-text" autofocus readonly></textarea>
+            <div>
+              <button onclick="copyTexto()">Copiar</button>
+            </div>
+          </div>
+          <div id="seccion-muñeco">
+            <img src="./images/muñeco.svg" alt="" />
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+  </body>
+</html>
